@@ -1,10 +1,10 @@
 package LinkedList;
 
-class Node {
-    int data;
-    Node next;
+public class Node {
+    public int data;
+    public Node next;
 
-    Node(int d) {
+    public Node(int d) {
         data = d;
         next = null;
     }
