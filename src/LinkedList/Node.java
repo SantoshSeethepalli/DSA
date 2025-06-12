@@ -17,6 +17,7 @@ public class Node {
         System.out.println();
     }
 
+    // Given a number get the linkedList of each Digit as a Node:
     public static Node getLinkedList(long number) {
         Node res = new Node(-1);
         Node temp = res;
