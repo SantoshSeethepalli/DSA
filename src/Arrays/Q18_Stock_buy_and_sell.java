@@ -31,13 +31,13 @@ public class Q18_Stock_buy_and_sell {
         int totalProfit = 0;
 
         for(int i = 1; i < n; i++) {
-            int previousDayCost = arr[i - 1];
+            int yesterdayCost = arr[i - 1];
             int todayCost = arr[i];
 
-            if(previousDayCost > todayCost) {
+            if(todayCost < yesterdayCost) {
                 continue;
             }
-            int diff = todayCost - previousDayCost;
+            int diff = todayCost - yesterdayCost;
             profits[i] = diff;
         }
 
