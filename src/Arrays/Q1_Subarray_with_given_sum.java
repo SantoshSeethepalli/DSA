@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Q1_Subarray_with_given_sum {
     static ArrayList<Integer> getListWithGivenIndices(int left, int right) {
+
         if(left > right) {
             return null;
         }
@@ -25,11 +26,11 @@ public class Q1_Subarray_with_given_sum {
     }
 
     static ArrayList<Integer> subarraySum(int[] arr, int target) {
-        int left = 0;
-        int right = 0;
-        int sum = 0;
 
-        for( ; right < arr.length; right++){
+        int sum = 0;
+        int left = 0;
+
+        for(int right = 0; right < arr.length; right++){
             //Increment the sum with array element at right index
             sum += arr[right];
 

@@ -3,27 +3,34 @@ package Arrays;
 import java.util.Arrays;
 
 public class Q7_Number_of_pairs {
-    private static int findIndexGreaterThanGivenValue(final double[] arr, final double val) {
+
+    private static int findIndexGreaterThanGivenValue(final double val, final double[] brr) {
+
         int left = 0;
-        int right = arr.length - 1;
+        int right = brr.length - 1;
+
         double epsilon = 1e-9;
 
         while (left <= right) {
+
             int mid = (left + right) >> 1;
 
-            if (arr[mid] - val >= -epsilon) {
+            if (brr[mid] - val >= -epsilon) {
                 right = mid - 1;
             } else {
                 left = mid + 1;
             }
         }
+
         return left;
     }
 
-    public static long countPairs(int x[], int y[], int M, int N) {
-        long count = 0;
+    public static long countPairs(int[] x, int[] y, int M, int N) {
+
         double[] arr = new double[x.length];
         double[] brr = new double[y.length];
+
+        long count = 0;
 
         for (int i = 0; i < M; i++) {
             arr[i] = Math.log10(x[i]) / x[i];
@@ -36,7 +43,7 @@ public class Q7_Number_of_pairs {
         Arrays.sort(brr);
 
         for (double xValue : arr) {
-            count += findIndexGreaterThanGivenValue(brr, xValue);;
+            count += findIndexGreaterThanGivenValue(xValue, brr);;
         }
         return count;
     }

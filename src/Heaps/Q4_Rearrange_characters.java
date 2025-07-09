@@ -56,4 +56,14 @@ public class Q4_Rearrange_characters {
 
         return res.toString();
     }
+
+    static class Pair {
+        char c;
+        int frequency;
+
+        public Pair(char c, int frequency) {
+            this.c = c;
+            this.frequency = frequency;
+        }
+    }
 }

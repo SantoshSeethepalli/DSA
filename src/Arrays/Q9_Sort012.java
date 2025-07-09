@@ -2,11 +2,13 @@ package Arrays;
 
 public class Q9_Sort012 {
     public static void sort012(int[] arr) {
+
         int numberOfZeros = 0;
         int numberOfOnes = 0;
         int numberOfTwos = 0;
 
         for(int num : arr) {
+
             if(num == 0) {
                 numberOfZeros++;
             } else if(num == 1) {
@@ -31,12 +33,15 @@ public class Q9_Sort012 {
 
     // Dutch National Flag Approach:
     public static void secondApproachForSort012(int[] nums) {
+
         int zeroPointer = 0;
         int onePointer = 0;
         int twoPointer = nums.length - 1;
 
         while(onePointer <= twoPointer) {
+
             if(nums[onePointer] == 0) {
+
                 int temp = nums[zeroPointer];
                 nums[zeroPointer] = nums[onePointer];
                 nums[onePointer] = temp;

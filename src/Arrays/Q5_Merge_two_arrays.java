@@ -3,7 +3,9 @@ package Arrays;
 import java.util.*;
 
 public class Q5_Merge_two_arrays {
+
     public void mergeArrays(int[] a, int[] b) {
+
         int aPointerEnd = a.length - 1;
         int bPointerStart = 0;
 

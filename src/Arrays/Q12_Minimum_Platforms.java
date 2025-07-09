@@ -62,7 +62,8 @@ public class Q12_Minimum_Platforms {
 //    }
 
 
-    static int findPlatform(int arr[], int dep[]) {
+    static int findPlatform(int[] arr, int[] dep) {
+
         if(arr.length != dep.length) return -1;
 
         Arrays.sort(arr);
