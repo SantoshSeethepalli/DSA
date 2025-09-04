@@ -42,7 +42,7 @@ public class JumpingFrog_v1 {
                 continue;
             }
 
-            int twoJumps = prev2 + Math.abs(heights[i] - heights[ i - 2]);
+            int twoJumps = prev2 + Math.abs(heights[i] - heights[i - 2]);
 
             prev2 = prev;
             prev = Math.min(oneJump, twoJumps);

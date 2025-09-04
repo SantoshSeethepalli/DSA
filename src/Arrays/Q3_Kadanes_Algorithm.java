@@ -7,10 +7,13 @@ public class Q3_Kadanes_Algorithm {
         int sum = 0;
         int maxSum = Integer.MIN_VALUE;
 
-        for(int i = 0; i < arr.length; i++) {
-            sum += arr[i];
+        for(int idx = 0; idx < arr.length; idx++) {
+
+            sum += arr[idx];
             maxSum = Math.max(sum, maxSum);
+
             if(sum < 0) {
+
                 sum = 0;
             }
         }

@@ -20,6 +20,7 @@ public class Q3_Rotate_a_Linked_List {
     }
 
     public Node rotate(Node head, int k) {
+
         if(head == null || head.next == null) {
             return head;
         }

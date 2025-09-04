@@ -6,14 +6,15 @@ public class JumpingFrog_v2 {
 
         int n = heights.length;
         int[] dp = new int[n];
+        dp[0] = 0;
 
-        for(int i = 0; i < n; i++) {
+        for(int i = 1; i < n; i++) {
 
             int min = Integer.MAX_VALUE;
 
-            for(int j = i + 1; j <= i + k && j < n; j++) {
+            for(int j = i - 1; j >= i - k && j >= 0; j--) {
 
-                int jumpCost = dp[j - i] + Math.abs(heights[j] - heights[i]);
+                int jumpCost = dp[j] + Math.abs(heights[j] - heights[i]);
                 min = Math.min(min, jumpCost);
             }
 

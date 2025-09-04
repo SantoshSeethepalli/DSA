@@ -3,6 +3,7 @@ package Strings;
 import java.lang.invoke.StringConcatFactory;
 
 public class Q3_LongestPalindrome {
+
     private static int findPalindromicLength(char[] arr, int leftIndex, int rightIndex) {
         int res = 0;
 
