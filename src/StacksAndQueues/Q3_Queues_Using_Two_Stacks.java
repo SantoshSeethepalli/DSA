@@ -9,6 +9,7 @@ public class Q3_Queues_Using_Two_Stacks {
 
     void insertAtTheBottomOfTheStack(int number) {
         if (queueStack.isEmpty()) {
+
             queueStack.push(number);
         } else {
             int ejectedTopElement = queueStack.pop();

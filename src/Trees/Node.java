@@ -3,10 +3,10 @@ package Trees;
 import java.util.ArrayList;
 
 public class Node {
-    int data;
-    Node left;
-    Node right;
-    Node nexRight;
+    public int data;
+    public Node left;
+    public Node right;
+    public Node nexRight;
 
     Node() {
     }
